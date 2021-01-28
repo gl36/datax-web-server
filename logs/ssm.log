@@ -1,0 +1,24 @@
+[ERROR] [2021-01-14 10:58:52][root.report.db.DbManager]解析DBConfig.xml异常!
+[ERROR] [2021-01-14 10:58:52][root.report.db.DbManager]初始化数据库【hive】失败!
+[ERROR] [2021-01-14 11:00:58][root.report.db.DbManager]解析DBConfig.xml异常!
+[ERROR] [2021-01-14 11:00:58][root.report.db.DbManager]初始化数据库【hive】失败!
+[ERROR] [2021-01-14 11:06:15][com.alibaba.druid.pool.DruidDataSource]testOnBorrow is true, testWhileIdle is true, validationQuery not set
+[WARN] [2021-01-14 11:06:16][com.alibaba.druid.pool.DruidConnectionHolder]getHoldability error
+java.sql.SQLException: Method not supported
+	at org.apache.hive.jdbc.HiveConnection.getHoldability(HiveConnection.java:796)
+	at com.alibaba.druid.pool.DruidConnectionHolder.<init>(DruidConnectionHolder.java:97)
+	at com.alibaba.druid.pool.DruidConnectionHolder.<init>(DruidConnectionHolder.java:75)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:678)
+	at root.report.db.DbFactory.init(DbFactory.java:75)
+	at root.report.db.DbFactory.Open(DbFactory.java:108)
+	at root.report.db.DbFactory.Open(DbFactory.java:99)
+	at root.report.datastorage.mysql.DataModeling.createHiveTableMethod(DataModeling.java:330)
+	at root.report.datastorage.mysql.DataModeling.main(DataModeling.java:527)
+[INFO] [2021-01-14 11:06:16][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[DEBUG] [2021-01-14 11:06:16][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[INFO] [2021-01-14 11:06:16][root.report.db.DbManager]初始化数据库【hive】耗时1.4865s
+[DEBUG] [2021-01-14 11:06:16][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [org.apache.hive.jdbc.HiveConnection@30e868be] will not be managed by Spring
+[DEBUG] [2021-01-14 11:06:16][datamodeling.createHiveTable2]==>  Preparing: CREATE external TABLE IF NOT EXISTS aalee11111 (id bigint,name double ) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
+[DEBUG] [2021-01-14 11:06:16][datamodeling.createHiveTable2]==> Parameters: 
+[ERROR] [2021-01-18 22:55:08][root.report.db.DbManager]解析DBConfig.xml异常!
+[ERROR] [2021-01-18 22:55:08][root.report.db.DbManager]初始化数据库【hive】失败!
